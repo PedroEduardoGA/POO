@@ -1,0 +1,19 @@
+package br.uel.banco;
+
+import java.math.BigDecimal;
+
+public class ContaPoupanca implements ContaBancaria {
+
+	@Override
+	public void sacar(BigDecimal valor) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void depositar(BigDecimal valor) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

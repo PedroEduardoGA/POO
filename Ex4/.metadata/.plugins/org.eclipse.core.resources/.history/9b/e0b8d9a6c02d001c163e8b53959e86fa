@@ -1,0 +1,26 @@
+package br.uel.banco;
+
+import java.math.BigDecimal;
+
+public class ContaInvestimento implements ContaBancaria, Tributavel {
+	protected BigDecimal saldo;
+	protected String cliente;
+	public String numeroConta;
+
+	public void calcularTributo(BigDecimal taxaRendimento) {
+		
+
+	}
+
+	public void sacar(BigDecimal valor) {
+		
+
+	}
+
+
+	public void depositar(BigDecimal valor) {
+		
+
+	}
+
+}

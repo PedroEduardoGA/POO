@@ -1,0 +1,21 @@
+package br.uel.banco;
+
+import java.math.BigDecimal;
+
+public class ContaCorrente implements ContaBancaria {
+	protected BigDecimal saldo;
+	protected String cliente;
+	public String numeroConta;
+	public int diaRendimento;
+	
+	public void sacar(BigDecimal valor) {
+		
+
+	}
+
+	public void depositar(BigDecimal valor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

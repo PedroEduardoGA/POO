@@ -1,0 +1,25 @@
+package br.uel.banco;
+
+import java.math.BigDecimal;
+
+public class ContaInvestimento implements ContaBancaria, Tributavel {
+
+	@Override
+	public void calcularTributo(BigDecimal taxaRendimento) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void sacar(BigDecimal valor) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void depositar(BigDecimal valor) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

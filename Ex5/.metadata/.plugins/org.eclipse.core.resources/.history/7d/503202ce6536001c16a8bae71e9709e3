@@ -1,0 +1,13 @@
+package br.uel.banco;
+
+import java.math.BigDecimal;
+
+public abstract class ContaCorrente extends ContaBancaria {
+	BigDecimal limite;
+	
+	public ContaCorrente(String nome,String nRoConta,BigDecimal limit) {//construtor
+		this.cliente=nome;
+		this.numeroConta=nRoConta;
+		this.limite=limit;
+	}
+}

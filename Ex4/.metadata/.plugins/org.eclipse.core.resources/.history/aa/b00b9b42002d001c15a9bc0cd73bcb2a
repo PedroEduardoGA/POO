@@ -1,0 +1,17 @@
+package br.uel.banco;
+
+import java.math.BigDecimal;
+
+public class ContaCorrente implements ContaBancaria {
+	
+	void sacar(BigDecimal valor) {
+		
+
+	}
+
+	void depositar(BigDecimal valor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

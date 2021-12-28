@@ -1,0 +1,5 @@
+package br.uel.banco;
+
+public abstract class ContaBancaria {
+
+}

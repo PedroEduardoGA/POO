@@ -1,0 +1,17 @@
+package br.uel.banco;
+
+public class ContaCorrente implements ContaBancaria {
+
+	@Override
+	public void sacar() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void depositar() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\Usuario\Documents\UEL\3º Semestre_Aulas\POO - Bruno\Atividades\Ex2\Ex2PedroGarbossa\.metadata\.plugins\org.eclipse.jdt.core
+1231963229.index
+899504955.index
