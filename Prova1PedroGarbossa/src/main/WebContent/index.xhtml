@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" >
+
+<h:head>
+    <title>Comprador.com</title>
+</h:head>
+
+<h:body>
+
+    <h:form id="barraDeFerramentas">
+        <p:toolbar>
+            <p:toolbarGroup align="left">
+                <p:commandButton icon="pi pi-search" value="Buscar" action="search-product-client.xhtml" ajax="false"/>                      
+                <p:commandButton icon="pi pi-shopping-cart" value="Carrinho" action="cart-page.xhtml" ajax="false"/>              
+            </p:toolbarGroup>
+        </p:toolbar>
+    </h:form>
+
+    <div><ui:insert name="pagina" /></div>
+    
+
+</h:body>
+</html>

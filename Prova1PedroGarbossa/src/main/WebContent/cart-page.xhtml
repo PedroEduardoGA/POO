@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<ui:composition 
+template="./index.xhtml"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="pagina">
+				
+			<h:form id="carrinhoCompras">
+				<div class="p-col-12" align="center">
+					<br/>
+						<p:outputLabel value="Carrinho vazio!" rendered="#{empty carrinhoController.carrinhoCompras}" 
+								align="center" style ="font-family:arial;font-size:28px;font-style:bold;"/>
+			   		<br/>
+				</div>
+			   
+			   <div class="p-col-12" align="center">
+			   <p:dataTable id="tabelaCarrinho" var="produto" 
+			   			value="#{carrinhoController.carrinhoCompras}" 
+			   			rendered="#{not empty carrinhoController.carrinhoCompras}" >
+			      
+			      <p:column headerText="Nome">
+			         <h:outputText id="nome" value="#{produto.nome}"/>
+			      </p:column>
+			 
+			      <p:column headerText="Preço">
+			         <h:outputText id="preco" value="R$ #{produto.preco}">
+			         	<f:convertNumber pattern="#0,00" minFractionDigits="2"  />
+			         </h:outputText>
+			       </p:column>
+			 
+			       <p:column headerText="Quantidade">
+			         <h:outputText id="quantidade" value="#{produto.quantidade}"/>
+			       </p:column>
+			       
+			       <p:column headerText="Valor Total">
+			         <h:outputText id="vlrTotal" value="R$ #{produto.valorTotal}">
+			         	<f:convertNumber pattern="#0,00" minFractionDigits="2"  />
+			         </h:outputText>
+			       </p:column>
+			       
+			       <p:column>
+	           	   		<p:commandButton icon="pi pi-trash" update="carrinhoCompras" value="Remover"
+	                        action="#{carrinhoController.removerCompra(produto)}"
+	                        styleClass="ui-priority-primary">
+	               		</p:commandButton>
+	        	   </p:column>
+	        	   
+			</p:dataTable>
+			</div>
+			<br/>
+			<div class="p-col-12" align="right">
+				<h:outputText id="total" value="R$ #{carrinhoController.totalCompra}" style ="font-family:arial;font-size:24px;font-style:bold;">
+			         <f:convertNumber pattern="#,00" minFractionDigits="2"  />
+				</h:outputText>
+			</div>
+			<br/>
+			<div class="p-col-12" align="center">
+				<br/>
+					<h:outputText id="labelForma" value="Forma de Pagamento:" style ="font-family:arial-black;font-size:26px;font-style:bold;"/>
+					<h:selectOneRadio id="formaPagamento">
+  						<f:selectItem itemLabel="Dinheiro"/>
+  						<f:selectItem itemLabel="Cartão"/>
+					</h:selectOneRadio>
+			</div>
+			<br/>
+			<div class="p-col-12" align="left" >
+				<p:commandButton icon="pi pi-arrow-left" value="Voltar" action="search-product-client.xhtml"/>
+			</div>
+		</h:form>
+		
+	</ui:define>
+
+</ui:composition>
